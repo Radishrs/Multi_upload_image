@@ -1,7 +1,7 @@
 import tkinter as tk
 #import tkinter.ttk
 from tkinter import filedialog
-import savepix3
+from mod import savepix
 
 fn = ''
 
@@ -23,7 +23,7 @@ def load_file(ev):
 
 def send(ev):
     global fn
-    big, mini = savepix3.get_image_url(savepix3.send(fn))
+    big, mini = savepix.get_image_url(savepix.send(fn))
     textbox.insert('end', '\n--------------\n')
     textbox.insert('end', 'Orig: ' + big + '\n')
     textbox.insert('end', 'Prev: ' + mini + '\n')
