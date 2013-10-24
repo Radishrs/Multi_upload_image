@@ -45,9 +45,8 @@ def add_url(module_name, ident_url_id, big_url, small_url):
     """Add url to table moduleName."""
     date = time_now()
     cursor.execute("INSERT INTO " + module_name +
-                   " (ident, big_url, small_url, date, last_update) VALUES ("
-                   + ident_url_id + ", '"
-                   + big_url + "', '" + small_url + "', '" + date + "', '" + date + "')")
+                   " (ident, big_url, small_url, date, last_update) VALUES ('%d', '%s', '%s', '%s', '%s')" %
+                   (ident_url_id, big_url, small_url, date, date))
     sql_connect.commit()
 
 
