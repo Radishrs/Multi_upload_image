@@ -2,10 +2,8 @@ __author__ = 'Radish'
 
 import sys
 
-#from PySide import QtCore
-from PySide import QtGui, QtCore
-#from PySide.QtDeclarative import QDeclarativeView
 
+from PySide import QtGui, QtCore
 
 ###########
 #app = QtGui.QApplication(sys.argv)
@@ -17,7 +15,6 @@ from PySide import QtGui, QtCore
 
 #label = qt_gui.QLabel("<font color=red size=40>Hello world</font>")
 #label.show()
-############################
 
 #app = QtGui.QApplication(sys.argv)
 #
@@ -61,7 +58,7 @@ class Example(QtGui.QMainWindow):
         self.setGeometry(300, 250, 450, 350)
         self.center()
         self.setWindowTitle('name of window')
-        self.setWindowIcon(QtGui.QIcon('img/icon.png'))
+        self.setWindowIcon(QtGui.QIcon('img/main.png'))
 
         self.show()
 
