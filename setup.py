@@ -14,8 +14,8 @@ if sys.platform == "win32":
     base = "Win32GUI"
 
 
-setup(  name = "guifoo",
+setup(  name = "Multi upload image",
         version = "0.1",
         description = "My GUI application!",
         options = {"build_exe": build_exe_options},
-        executables = [Executable("main.py", base=base)])
+        executables = [Executable("mainqt.py", base=base)])
