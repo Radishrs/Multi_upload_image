@@ -11,7 +11,7 @@ class MainWin(QtGui.QMainWindow):
         super(MainWin, self).__init__()
 
         self.init_ui()
-#пиздец сука, создавайся ебаный бранчЬ и пушся!
+
     def init_ui(self):
         exit_act = self.exit_action()
         open_act = self.open_action()
