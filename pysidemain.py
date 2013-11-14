@@ -1,4 +1,5 @@
 __author__ = 'Radish'
+__version__ = '0.2.0'
 
 import sys
 
@@ -13,14 +14,17 @@ class MainWin(QtGui.QMainWindow):
 
     def init_ui(self):
         exit_act = self.exit_action()
+        open_act = self.open_action()
 
         menu_bar = self.menuBar()
         file_menu = menu_bar.addMenu('File')
         file_menu.addAction(exit_act)
+        file_menu.addAction(open_act)
+        about_menu = menu_bar.addMenu('About')
 
         toolbar = self.addToolBar('Tools')
         toolbar.addAction(exit_act)
-        toolbar.addAction(self.open_action())
+        toolbar.addAction(open_act)
 
         QtGui.QToolTip.setFont(QtGui.QFont('Minion Pro', 10))
         self.statusBar()
