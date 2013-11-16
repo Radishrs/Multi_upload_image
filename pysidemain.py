@@ -35,8 +35,13 @@ class MainWin(QtGui.QMainWindow):
     def create_center_widget(self):
 
         self.text = QtGui.QTextEdit()
+        self.table = QtGui.QTableWidget(10, 6)
+        self.table.setHorizontalHeaderLabels(['Id', 'name', 'ok', 'fuck', 'this', 'shit'])
+
+
         grid = QtGui.QGridLayout()
-        grid.addWidget(self.text, 1, 0, 1, 1)
+        grid.addWidget(self.table, 0, 0)
+        grid.addWidget(self.text, 0, 1, )
         self.area = QtGui.QWidget(self)
         self.area.setLayout(grid)
         self.setCentralWidget(self.area)
@@ -54,7 +59,7 @@ class MainWin(QtGui.QMainWindow):
         self.about_menu = self.menu.addMenu('About')
 
     def main_window(self):
-        self.setGeometry(300, 200, 600, 400)
+        self.setGeometry(300, 100, 800, 600)
         self.setWindowTitle('Multi upload')
         self.setWindowIcon(QtGui.QIcon('img/main.png'))
 
